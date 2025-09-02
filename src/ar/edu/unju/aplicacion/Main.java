@@ -1,9 +1,12 @@
 package ar.edu.unju.aplicacion;
 import java.util.Scanner;
-import ar.edu.unju.transformacion.Texto;
+
 import ar.edu.unju.calendario.IncrementarAnio;
+import ar.edu.unju.juego.SopaDeLetras;
 import ar.edu.unju.lineas.ContarLineas;
+import ar.edu.unju.matriz.MatrizMultiplicacion;
 import ar.edu.unju.numeros.ProcesadorNumeros;
+import ar.edu.unju.transformacion.Texto;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,8 +17,8 @@ public class Main {
         System.out.println("2 - Incrementar año y mostrar día de la semana");
         System.out.println("3 - Contar y mostrar la linea mas larga y la mas corta");
 		System.out.println("4 - Procesar archivo de numeros");
-		System.out.println("5 - ");
-		System.out.println();
+		System.out.println("5 - Matriz de numeros enteros");
+		System.out.println("6 - Crear Sopa de Letras");
         System.out.print("Opción: ");
         int opcion = sc.nextInt();
 
@@ -51,10 +54,27 @@ public class Main {
 		        }
             	break;
 			case 5:
+				try {
+					System.out.print("Ingrese un número entre 1 y 10: ");
+					int numero = sc.nextInt();
 
-            	break;
+					MatrizMultiplicacion matriz = new MatrizMultiplicacion();
+					if (matriz.completarFila(numero)) {
+					    System.out.println("Matriz completa:");
+					    matriz.mostrarMatriz();
+					}
+			    } catch (Exception e) {
+			        System.out.println("Error: " + e.getMessage());
+			    }
+			    break;
 			case 6:
-
+				try {
+			        SopaDeLetras sopa = new SopaDeLetras();
+        			sopa.crearSopaDeLetras();
+        			sopa.mostrarSopaDeLetras();
+			    } catch (Exception e) {
+			        System.out.println("Error: " + e.getMessage());
+			    }
                 break;
             default:
                 System.out.println("Opción no valida");

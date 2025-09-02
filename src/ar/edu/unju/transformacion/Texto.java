@@ -12,8 +12,8 @@ import java.time.format.DateTimeFormatter;
 public class Texto {
     //throws Exception para simplificar el manejo de errores de E/S, ya que se esta usando la lectura y escritura de archivos
     public void procesarTexto() throws Exception {
-        BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\Santiago\\Desktop\\APU\\2do Año\\2do Cruatrimentre\\PCyP\\TP1 Practica\\PCYP_GRUPOXX_TP01\\TP01Frase.txt"));
-        BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\Santiago\\Desktop\\APU\\2do Año\\2do Cruatrimentre\\PCyP\\TP2 Practica\\PCYP_GRUPO05_TP02\\Punto02.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("TP01Frase.txt"));
+        BufferedWriter bw = new BufferedWriter(new FileWriter("Punto02.txt"));
 
         StringBuilder lineaModificada = new StringBuilder();
         int caracter;

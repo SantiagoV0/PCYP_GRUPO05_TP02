@@ -54,15 +54,8 @@ public class Main {
 		        }
             	break;
 			case 5:
-				try {
-					System.out.print("Ingrese un número entre 1 y 10: ");
-					int numero = sc.nextInt();
-
-					MatrizMultiplicacion matriz = new MatrizMultiplicacion();
-					if (matriz.completarFila(numero)) {
-					    System.out.println("Matriz completa:");
-					    matriz.mostrarMatriz();
-					}
+			    try {
+			        new MatrizMultiplicacion().ejecutar();
 			    } catch (Exception e) {
 			        System.out.println("Error: " + e.getMessage());
 			    }
